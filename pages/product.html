@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style.css -->
+    <link rel="stylesheet" href="../assets/css/pages/product.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="../assets/css/responsive/product.css" />
+    <title>ToCoToCoTea - Danh mục sản phẩm</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="header__main-content">
+        <!-- header__logo -->
+        <div class="header__logo">
+          <a href="https://tocotocotea.com/">
+            <img src="../assets/imgs/logo/Logo-ngang.png" alt="ToCoToCoTea"
+          /></a>
+        </div>
+        <!-- header__search -->
+        <div class="header__search">
+          <div class="heder__search--search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#b3b3b3"
+            >
+              <path
+                d="M765-144 526-383q-30 22-65.79 34.5-35.79 12.5-76.18 12.5Q284-336 214-406t-70-170q0-100 70-170t170-70q100 0 170 70t70 170.03q0 40.39-12.5 76.18Q599-464 577-434l239 239-51 51ZM384-408q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Z"
+              />
+            </svg>
+            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+          </div>
+          <select name="region" id="region">
+            <option value="all">Tất cả</option>
+            <option value="north">Miền Bắc</option>
+            <option value="south">Miền Nam</option>
+          </select>
+        </div>
+        <!-- header__btn -->
+        <div class="header__btn">
+          <button>Đăng nhập</button>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <div class="main-content">
+        <!-- main__menu -->
+        <div class="main__menu">
+          <h2>DANH MỤC</h2>
+          <div class="main__menu--list show" id="main__menu--btn">
+            <ul>
+              <li>
+                <a href="#outstanding">
+                  <div class="main__menu--name">Món Nổi Bật</div>
+                  <div class="main__menu--amount">46</div>
+                </a>
+              </li>
+              <li>
+                <a href="#instant">
+                  <div class="main__menu--name">Instant Milk Tea</div>
+                  <div class="main__menu--amount">0</div>
+                </a>
+              </li>
+              <li>
+                <a href="#milk-tea">
+                  <div class="main__menu--name">Trà Sữa</div>
+                  <div class="main__menu--amount">18</div>
+                </a>
+              </li>
+              <li>
+                <a href="#fruit-tea">
+                  <div class="main__menu--name">Fresh Fruit Tea</div>
+                  <div class="main__menu--amount">11</div>
+                </a>
+              </li>
+              <li>
+                <a href="#macchiato">
+                  <div class="main__menu--name">Macchiato Cream Cheese</div>
+                  <div class="main__menu--amount">3</div>
+                </a>
+              </li>
+              <li>
+                <a href="#ice-cream">
+                  <div class="main__menu--name">Ice Cream</div>
+                  <div class="main__menu--amount">3</div>
+                </a>
+              </li>
+              <li>
+                <a href="#special">
+                  <div class="main__menu--name">Special Menu</div>
+                  <div class="main__menu--amount">14</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- main__btn-menu -->
+        <div class="main__btn-menu">
+          <button id="toggle-menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- main__order -->
+        <div class="main__order">
+          <!-- main__order--outstanding -->
+          <input type="checkbox" id="toggle1" />
+          <label for="toggle1" class="main__order--label">
+            <span>Món Nổi Bật </span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div
+            class="main__order--dish main__order--outstanding"
+            id="outstanding"
+          >
+            <!-- Ô Long Kem Tươi Hoàng Gia -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/OOLONG-KEM-TUOI-HOANG-GIA-VANI.jpg"
+                alt="OOLONG-KEM-TUOI-HOANG-GIA-VANI"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Ô Long Kem Tươi Hoàng Gia
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">34.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Mộc Sen Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Oolong-Moc-Sen-Kem-Pho-Mai.jpg"
+                alt="Oolong-Moc-Sen-Kem-Pho-Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Ô Long Mộc Sen Kem Phô Mai
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">33.000đ</p>
+                <p class="main__order--price-origin">44.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Trà Sữa Hạnh Phúc -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Tra-sua-hanh-phuc-1.jpg"
+                alt="Tra-sua-hanh-phuc"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Trà Sữa Hạnh Phúc</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">39.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Chiến Thần Khổng Lồ -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Chien-than-topping-khong-lo.jpg"
+                alt="Chien-than-topping-khong-lo"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Chiến Thần Khổng Lồ</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">35.000đ</p>
+                <p class="main__order--price-origin">45.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Vải Quế Hoa -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/O-Long-Vai-Que-Hoa-1.jpg"
+                alt="Ô Long Vải Quế Hoa"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Vải Quế Hoa</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">35.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Trà Sữa Đậu Đỏ -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Tra-sua-dau-do-2.jpg"
+                alt="Trà Sữa Đậu Đỏ"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Trà Sữa Đậu Đỏ</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">39.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Xanh Nhài Hibiscus -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Xanh-nhai-hibiscus-1.jpg"
+                alt="Xanh Nhài Hibiscus"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Xanh Nhài Hibiscus</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">44.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Mận Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/O-Long-Man-Kem-Pho-Mai.jpg"
+                alt="Ô Long Mận Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Mận Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">30.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main__order--instant -->
+          <input type="checkbox" id="toggle2" />
+          <label for="toggle2" class="main__order--label">
+            <span>Instant Milk Tea</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div
+            class="main__order--dish main__order--instant"
+            id="instant"
+          ></div>
+
+          <!-- main__order--milk-tea -->
+          <input type="checkbox" id="toggle3" />
+          <label for="toggle3" class="main__order--label">
+            <span>Trà Sữa</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div class="main__order--dish main__order--milk-tea" id="milk-tea">
+            <!--Trà Sữa Hai Anh Em -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Tra-Sua-Hai-Anh-Em.jpg"
+                alt="Tra-Sua-Hai-Anh-Em"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Trà Sữa Hai Anh Em</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">39.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Xanh Sữa Nhài Đào Tiên -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/900x900-Xanh-Sua-Nhai-Dao-Tien.jpg"
+                alt="Xanh-Sua-Nhai-Dao-Tien"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Xanh Sữa Nhài Đào Tiên</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">34.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Trà Sữa Nếp Cẩm -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Tra-Sua-Nep-Cam.png"
+                alt="Trà Sữa Nếp Cẩm "
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Trà Sữa Nếp Cẩm</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">30.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Trà Sữa Ba Anh Em -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/3-anh-em.jpg"
+                alt="Trà Sữa Ba Anh Em"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Trà Sữa Ba Anh Em</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">39.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main__order--fruit-tea -->
+          <input type="checkbox" id="toggle4" />
+          <label for="toggle4" class="main__order--label">
+            <span>Fresh Fruit Tea</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div class="main__order--dish main__order--fruit-tea" id="fruit-tea">
+            <!-- Ô Long Mộc Sen Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Oolong-Moc-Sen-Kem-Pho-Mai.jpg"
+                alt="Oolong-Moc-Sen-Kem-Pho-Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Ô Long Mộc Sen Kem Phô Mai
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">33.000đ</p>
+                <p class="main__order--price-origin">44.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Xanh Nhài Hibiscus -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Xanh-nhai-hibiscus-1.jpg"
+                alt="Xanh Nhài Hibiscus"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Xanh Nhài Hibiscus</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">44.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Vải Quế Hoa -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/O-Long-Vai-Que-Hoa-1.jpg"
+                alt="Ô Long Vải Quế Hoa"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Vải Quế Hoa</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">35.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Đào Tiên -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/900x900_Ô-Long-Dào-Tiên.jpg"
+                alt="Ô Long Đào Tiên"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Đào Tiên</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">35.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main__order--macchiato -->
+          <input type="checkbox" id="toggle5" />
+          <label for="toggle5" class="main__order--label">
+            <span>Macchiato</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div class="main__order--dish main__order--macchiato" id="macchiato">
+            <!-- Ô Long Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/oolong-kem-pho-mai.png"
+                alt="Ô Long Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">40.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Dâu Tằm Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/dau-tam-kem-pho-mai.png"
+                alt="Dâu Tằm Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Dâu Tằm Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">38.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Hồng Trà Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Hong-Tra-Kem-Pho-Mai-2-copy.jpg"
+                alt="Hồng Trà Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Hồng Trà Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <p class="main__order--price-origin">38.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main__order--ice-cream -->
+          <input type="checkbox" id="toggle6" />
+          <label for="toggle6" class="main__order--label">
+            <span>Ice Cream</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div class="main__order--dish main__order--ice-cream" id="ice-cream">
+            <!-- Kem Vani Trà Sữa Trân Châu Hoàng Kim -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Kem-Vani-Tra-Sua-Tran-Chau-Hoang-Kim.png"
+                alt="Kem Vani Trà Sữa Trân Châu Hoàng Kim"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Kem Vani Trà Sữa Trân Châu Hoàng Kim
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <!-- <p class="main__order--price-origin">40.000đ</p> -->
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Kem Trà Sữa Trân Châu Hoàng Kim -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Kem-Tra-Sua-Tran-Chau-Hoang-Kim.png"
+                alt="Kem Trà Sữa Trân Châu Hoàng Kim"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Kem Trà Sữa Trân Châu Hoàng Kim
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <!-- <p class="main__order--price-origin">40.000đ</p> -->
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Kem Trân Châu Hoàng Kim -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/kem-tran-chau-hoang-kim.jpg"
+                alt="Kem Trân Châu Hoàng Kim"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Kem Trân Châu Hoàng Kim</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">25.000đ</p>
+                <!-- <p class="main__order--price-origin">40.000đ</p> -->
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main__order--special -->
+          <input type="checkbox" id="toggle7" />
+          <label for="toggle7" class="main__order--label">
+            <span>Special Menu</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </label>
+          <div class="main__order--dish main__order--special" id="special">
+            <!-- Ô Long Mộc Sen Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/Oolong-Moc-Sen-Kem-Pho-Mai.jpg"
+                alt="Oolong-Moc-Sen-Kem-Pho-Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">
+                Ô Long Mộc Sen Kem Phô Mai
+              </div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">33.000đ</p>
+                <p class="main__order--price-origin">44.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Ô Long Mận Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/O-Long-Man-Kem-Pho-Mai.jpg"
+                alt="Ô Long Mận Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Ô Long Mận Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">30.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+
+            <!-- Dâu Tằm Kem Phô Mai -->
+            <div class="main__order--item">
+              <img
+                src="../assets/imgs/products/dau-tam-kem-pho-mai.png"
+                alt="Dâu Tằm Kem Phô Mai"
+                class="main__order--img"
+              />
+              <div class="main__order--item-name">Dâu Tằm Kem Phô Mai</div>
+              <div class="main__order--item-price">
+                <p class="main__order--price-sale">30.000đ</p>
+                <p class="main__order--price-origin">38.000đ</p>
+                <div class="main__order--add">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- main__cart -->
+        <div class="main__cart">
+          <div class="main__cart--top" id="cart-top">
+            <div class="main__cart--title">
+              <button>
+                <i class="fa-regular fa-circle-xmark" id="close-cart"></i>
+              </button>
+              <h2>Giỏ hàng của tôi</h2>
+              <p>Xóa tất cả</p>
+            </div>
+            <div class="main__cart--product">Chưa có sản phẩm nào!</div>
+          </div>
+          <div class="main__cart--bottom">
+            <div class="main__cart--cost">
+              <!-- Fixed: Hình ảnh thiếu alt -->
+              <img
+                src="../assets/imgs/logo/icon-glass-tea.png"
+                alt="Icon ly trà sữa"
+              />
+              <span style="font-weight: 600">x</span>
+              <span style="color: #8a733f">0</span>
+              <span>=</span>
+              <span style="font-weight: 600; color: #8a733f">0đ</span>
+            </div>
+            <div class="main__cart--btn">
+              <button id="button"></button>Thanh toán
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="../assets/js/product.js"></script>
+    </main>
+  </body>
+</html>

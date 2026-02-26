@@ -1,0 +1,496 @@
+#header {
+  position: absolute;
+  background-color: transparent;
+}
+
+/* ========== HOME ========== */
+.home {
+  padding-bottom: 50px;
+}
+
+.banner,
+.news {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home__hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.home__hero-slider {
+  display: flex;
+  width: 100%;
+}
+
+.home__hero-slide {
+  padding-top: 56%;
+  flex: 0 0 100%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-prev,
+.hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  padding: 20px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-prev {
+  left: 20px;
+}
+.hero-next {
+  right: 20px;
+}
+
+.home__hero-img {
+  width: 100%;
+}
+
+.home__hero-btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  text-align: center;
+  color: white;
+}
+
+.home__hero-btn a {
+  border: 2px solid white;
+  padding: 12px 46px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.home__hero-btn a:hover {
+  background-color: #d3b673;
+  border: 2px solid transparent;
+}
+
+.home__hero-btn i {
+  font-size: 2rem;
+}
+
+.home__hero-btn p {
+  font-size: 1.4rem;
+}
+
+/* ========== PRODUCT ========== */
+.product {
+  padding-top: 50px;
+}
+
+.product__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.product__subtitle {
+  font-size: 2.2rem;
+  color: #d3b673;
+}
+
+.product__heading {
+  font-size: 3.6rem;
+}
+
+.product__line {
+  width: 35%;
+}
+
+.product__list {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.product__card {
+  margin-bottom: 32px;
+}
+
+.product__card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 0;
+  background-color: #f5f5f5f5;
+  box-shadow: 0px 2px 1.5px 0px #ccc;
+}
+
+.product__card img {
+  width: 100%;
+}
+
+.product__name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.product__price {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.product__price--origin {
+  color: #d3b673;
+  font-weight: 600;
+}
+
+.product__price--sale {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #bebebe;
+}
+
+.product__btn,
+.product__list-btn {
+  font-size: 1.6rem;
+  padding: 12px 20px;
+  color: white;
+  border: 1px solid transparent;
+  background-color: #d3b673;
+  cursor: pointer;
+}
+
+.product__btn:hover,
+.product__list-btn:hover {
+  border: 1px solid #d3b673;
+  color: #d3b673;
+  background-color: transparent;
+}
+
+.product__list-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ========== BANNER ========== */
+.banner__item {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner__item img {
+  width: 100%;
+}
+
+.banner__info {
+  position: absolute;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.banner__info--right {
+  right: 5%;
+  top: 30%;
+  color: white;
+}
+
+.banner__info--left {
+  left: 5%;
+  top: 30%;
+  color: black;
+}
+
+.banner__subtitle {
+  color: #d3b673;
+  font-size: 2.2rem;
+}
+
+.banner__title {
+  font-size: 3.6rem;
+}
+
+.banner__desc {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+.banner__btn {
+  font-size: 1.6rem;
+  padding: 12px 20px;
+  color: white;
+  border: 1px solid transparent;
+  background-color: #d3b673;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.banner__btn:hover {
+  border: 1px solid #d3b673;
+  color: #d3b673;
+  background-color: transparent;
+}
+
+/* ========== NEWS ========== */
+.news__main {
+  display: flex;
+  gap: 32px;
+}
+
+.news__col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news__latest {
+  background-color: #dbdbdbba;
+}
+
+.news__latest a {
+  text-decoration: none;
+  color: black;
+}
+
+.news__latest img {
+  width: 100%;
+}
+
+.news__content {
+  padding: 16px;
+  font-size: 1.4rem;
+}
+
+.news__content p {
+  margin-top: 36px;
+  line-height: 2rem;
+}
+
+.news__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.news__item {
+  width: calc(50% - 10px);
+  background-color: #dbdbdbba;
+}
+
+.news__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.news__item img {
+  width: 100%;
+  height: 153px;
+}
+
+.news__list--right {
+  list-style: none;
+}
+
+.news__item--right {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.news__item--right-content {
+  font-size: 1.6rem;
+  margin-left: 12px;
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .banner__info--left,
+  .banner__info--right {
+    top: 15%;
+  }
+
+  .product__title {
+    gap: 25px;
+  }
+
+  .product__heading {
+    width: 400px;
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+  }
+
+  .news__main {
+    flex-direction: column;
+  }
+
+  .news__col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 739px) {
+  .banner__info {
+    width: 40%;
+    gap: 15px;
+  }
+  .banner__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .banner__title {
+    font-size: 2rem;
+  }
+  .banner__desc {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .banner__btn {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  .product__heading {
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+  }
+
+  .product__line {
+    width: 95%;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .product__line {
+    width: 60%;
+  }
+}
+/* -------------ANIMATION----------------- */
+/* Hiệu ứng nút lên xuống nhỏ */
+@keyframes up_down {
+  0% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.btn-up_down {
+  background: url(../imgs/logo/ic_scoll.webp) center / contain no-repeat;
+  height: 32px;
+  animation: up_down 0.6s infinite alternate;
+}
+
+/* --- CARD CHÍNH --- */
+.product__card {
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.product__card-img {
+  overflow: hidden;
+}
+
+/* --- ẢNH --- */
+.product__card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* --- THÔNG TIN --- */
+.product__card-info h3,
+.product__card-info .product__price,
+.product__card-info .product__btn {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* Mặc định: vị trí ban đầu */
+.product__card-info h3,
+.product__card-info .product__price {
+  top: 40px;
+  font-size: 2rem;
+}
+
+.product__price .product__price--sale {
+  font-size: 1.9rem;
+}
+
+.product__card-info .product__btn {
+  top: 80px;
+}
+
+/* --- HIỆU ỨNG HOVER --- */
+.product__card:hover img {
+  transform: scale(1.2);
+}
+
+.product__card:hover h3,
+.product__card:hover .product__price {
+  transform: scale(0.9) translateY(-40px);
+}
+
+.product__card:hover .product__btn {
+  transform: translateY(-80px);
+}
+/* --------NEWS ANIMATION---------- */
+.news__wall {
+  width: 100%;
+  overflow: hidden;
+}
+.news__ani {
+  transition: all 0.5s ease;
+}
+.news__ani img {
+  transition: all 0.5s ease;
+}
+.news__ani iframe {
+  transition: all 0.5s ease;
+}
+.news__ani:hover {
+  box-shadow: 3.5px 6px 18px 0 rgb(0 0 0 / 40%);
+}
+.news__ani:hover img {
+  transform: scale(1.1);
+}
+.news__ani:hover iframe {
+  transform: scale(1.1);
+}
+.news__wall--right {
+  min-width: 180px;
+  max-width: 180px;
+  overflow: hidden;
+}
+.news__wall--right iframe {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.news__wall--right iframe:hover {
+  transform: scale(1.1);
+}

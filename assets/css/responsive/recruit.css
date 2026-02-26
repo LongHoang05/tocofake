@@ -1,0 +1,137 @@
+@media (min-width: 665px) and (max-width: 1023px) {
+  .Slider__content h3 {
+    font-size: 24px;
+  }
+  .Slider__content--decription {
+    margin-bottom: 28px;
+  }
+  .Slider__content {
+    top: 36%;
+  }
+  button {
+    height: 70%;
+  }
+  button i {
+    font-size: 26px;
+  }
+  .Slider__content--link {
+    font-size: 10px;
+    padding: 2px 10px;
+  }
+  .jobSection__text__titile {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .About__container__row__content__info {
+    padding: 60px 18px;
+  }
+  .About__container__row__content__info h3 {
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 22px;
+  }
+  .About__container__row__content__info p {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 664px) {
+  .navbar__menu__toggler {
+    display: flex;
+    padding-top: 5px;
+  }
+  .navbar__menu {
+    flex: 1 1 100%;
+  }
+  #nav-links {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease, background 0.5s ease;
+    width: 100%;
+    left: 0;
+    top: 68px;
+  }
+
+  .navbar__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar__background {
+    background-color: #212529;
+  }
+  .navbar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #nav-links.show {
+    max-height: 300px;
+    background-color: #212529;
+  }
+  .Slider__content h3 {
+    font-size: 16px;
+  }
+  .Slider__content--decription {
+    margin-bottom: 20px;
+  }
+  .Slider__content {
+    top: 20%;
+  }
+  button {
+    height: 40%;
+  }
+  button i {
+    font-size: 20px;
+  }
+  .Slider__content__btn--right,
+  .Slider__content__btn--left {
+    font-size: 18px;
+    margin: 0 4%;
+  }
+  .Slider__content--link {
+    font-size: 10px;
+    padding: 2px 10px;
+  }
+  /* job */
+  .jobSection__text {
+    padding-top: 40px;
+  }
+  .jobSection__text span {
+    padding: 0 80px;
+    margin-bottom: 10px;
+  }
+  /* banner about */
+  .Banner__about__content--description {
+    padding: 38px 68px;
+  }
+  /* about */
+  .About__container__row__content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row__content__right {
+    flex-direction: column;
+  }
+  .About__container {
+    margin: 0 0;
+    padding: 0;
+  }
+  .About__collection {
+    padding: 30px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .collection-item span {
+    margin-top: 20px;
+  }
+}

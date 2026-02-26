@@ -1,0 +1,167 @@
+#footer {
+  position: relative;
+  bottom: 0;
+  background-image: url(../../imgs/footer/ft_bg_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 85px;
+  gap: 30px;
+}
+
+.footer__logo {
+  width: 20%;
+}
+
+.footer__logo-img {
+  width: 100%;
+}
+
+.footer__title {
+  color: #d3b673;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.footer__info-list,
+.footer__about-us-list,
+.footer__policy-list {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.footer__info-item,
+.footer__about-us-item,
+.footer__policy-item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__info {
+  width: 40%;
+  color: white;
+}
+
+.footer__about-us {
+  width: 20%;
+}
+
+.footer__policy {
+  width: 20%;
+}
+
+.footer__info-item .footer__icon {
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: #d3b673;
+}
+
+.footer__social-list {
+  display: flex;
+  list-style: none;
+  gap: 5%;
+}
+
+.footer__social-list .footer__icon {
+  color: #d3b673;
+  font-size: 2.4rem;
+}
+
+.footer__img-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.footer__img-item {
+  width: 45%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.footer__img-item img {
+  width: 100%;
+}
+
+.footer-bottom {
+  color: white;
+  font-size: 1.8rem;
+  border-top: 2px solid white;
+  padding: 30px 0;
+}
+
+.footer-bottom-left {
+  float: left;
+  font-weight: 700;
+}
+
+.footer-bottom-right {
+  font-size: 1.4rem;
+  float: right;
+}
+
+@media (max-width: 1023px) {
+  .footer__container {
+    max-width: 720px;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+  }
+  .footer__logo {
+    width: 40%;
+  }
+  .footer__info {
+    width: 50%;
+  }
+
+  .footer__about-us {
+    padding-left: 50px;
+    width: 40%;
+  }
+
+  .footer__policy {
+    width: 50%;
+  }
+
+  .footer-bottom {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .footer__container {
+    max-width: 960px;
+  }
+}

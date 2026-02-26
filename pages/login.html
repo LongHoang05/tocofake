@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dang nhap</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: url("https://i.pinimg.com/736x/29/69/d1/2969d125bc5b79c00904b86927c51843.jpg")
+          no-repeat right/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 0;
+      }
+
+      .wrap-popup-login-content {
+        width: 380px;
+        position: relative;
+        overflow: hidden;
+        padding: 35px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 0 25px rgba(106, 38, 13, 0.427);
+        background: rgba(255, 255, 255, 0.267);
+        backdrop-filter: blur(10px);
+      }
+
+      .wrap-popup-login-content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(https://i.pinimg.com/736x/90/b7/b5/90b7b55b2f995339fae124d5b9358451.jpg)
+          no-repeat center/cover;
+        filter: blur(3px);
+        z-index: -1;
+      }
+
+      .login-description {
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 25px;
+        font-style: italic;
+      }
+      .login-area input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        outline: none;
+        margin: 5px -10px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.8);
+        margin-right: 20px;
+      }
+      .login-area input::placeholder {
+        color: #260f0f;
+      }
+
+      .logo-tocotoco {
+        width: 400px;
+        padding-bottom: 30px;
+      }
+      img {
+        vertical-align: middle;
+        border-style: none;
+      }
+
+      .login-btn {
+        background: #e7c079;
+        color: #000;
+        font-weight: bold;
+        padding: 12px;
+        border-radius: 25px;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .login-btn:hover {
+        background: #cfaa56;
+      }
+
+      .suggest-text {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      .suggest-text .link,
+      .forgot-password {
+        cursor: pointer;
+        font-weight: bold;
+        color: #1a1010;
+        transition: 0.2s;
+      }
+      .suggest-text .link:hover,
+      .forgot-password:hover {
+        text-decoration: underline;
+      }
+      .back-home {
+        color: #491616;
+        text-decoration: none;
+      }
+      .back-home:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-popup-login-content">
+      <!-- Fixed: Hình ảnh thiếu alt -->
+      <img
+        src="https://tocotocotea.com/wp-content/uploads/2024/09/Logo-ngang_trang.png"
+        alt="Logo ToCoToCo Trắng"
+        class="logo-tocotoco"
+      />
+
+      <div class="login-description" style="color: #000000">
+        <b
+          >"Đăng nhập để tích điểm, lưu lại những món yêu thích và nhận những ưu
+          đãi đặc biệt từ ToCoToCo nhé!"</b
+        >
+      </div>
+
+      <div class="login-area">
+        <input
+          id="phone"
+          type="text"
+          autocomplete="off"
+          placeholder="Nhập số điện thoại"
+          style="color: #2c0303"
+        />
+        <div
+          id="err-phone"
+          style="color: red; font-size: 12px; text-align: left"
+        ></div>
+
+        <div style="position: relative">
+          <input
+            id="password"
+            type="password"
+            autocomplete="off"
+            placeholder="Nhập mật khẩu"
+            style="color: #210f0f; width: 100%"
+          />
+          <span
+            id="togglePass"
+            style="
+              position: absolute;
+              right: 12px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              font-size: 13px;
+            "
+          >
+            Hiện
+          </span>
+        </div>
+        <div
+          id="err-pass"
+          style="color: red; font-size: 12px; text-align: left"
+        ></div>
+
+        <div class="forgot-password" style="color: #000000">Quên mật khẩu?</div>
+        <div class="login-btn btn-yellow" id="loginBtn">Đăng nhập</div>
+
+        <div class="suggest-text">
+          <div class="text" style="color: #320404">Bạn chưa có tài khoản?</div>
+          <div class="link register-link" style="color: #000000">
+            Tạo tài khoản
+          </div>
+        </div>
+        <div class="suggest-text">
+          <!-- Fixed: Nút không hoạt động (thêm href) -->
+          <a href="../index.html" class="back-home" style="color: #2a0808"
+            >Quay lại màn hình chính</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed: Nút không có validation khi đăng nhập -->
+    <script>
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          var phone = document.getElementById("phone").value.trim();
+          var pass = document.getElementById("password").value.trim();
+          var errPhone = document.getElementById("err-phone");
+          var errPass = document.getElementById("err-pass");
+          var valid = true;
+
+          errPhone.innerText = "";
+          errPass.innerText = "";
+
+          if (!phone) {
+            errPhone.innerText = "Vui lòng nhập số điện thoại";
+            valid = false;
+          }
+          if (!pass) {
+            errPass.innerText = "Vui lòng nhập mật khẩu";
+            valid = false;
+          }
+
+          if (valid) {
+            alert("Đăng nhập thành công (Demo)");
+          }
+        });
+
+      // Fixed: Nút ẩn/hiện mật khẩu không hoạt động
+      document
+        .getElementById("togglePass")
+        .addEventListener("click", function () {
+          var passInput = document.getElementById("password");
+          if (passInput.type === "password") {
+            passInput.type = "text";
+            this.innerText = "Ẩn";
+          } else {
+            passInput.type = "password";
+            this.innerText = "Hiện";
+          }
+        });
+    </script>
+  </body>
+</html>

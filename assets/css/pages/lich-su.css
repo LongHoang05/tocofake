@@ -1,0 +1,22 @@
+.main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto 60px;
+}
+
+.main p {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .main {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .main {
+    max-width: 960px;
+  }
+}

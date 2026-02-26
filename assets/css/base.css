@@ -1,0 +1,17 @@
+@import url(layout/header.css);
+@import url(layout/footer.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed: Chặn thẻ nghi vấn gây tràn viền, xuất hiện thanh cuộn ngang */
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Barlow";
+  overflow-x: hidden;
+}
