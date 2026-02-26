@@ -32,8 +32,8 @@ closeBtn.addEventListener("click", () => {
   button.classList.remove("active"); // (tùy chọn) bỏ trạng thái active nếu cần
 });
 
-// Fixed: Nút không hoạt động (Cập nhật logic giỏ hàng)
-const addBtns = document.querySelectorAll(".main__order--add");
+// Cập nhật logic giỏ hàng (Refactored với Event Delegation & DRY)
+const mainOrder = document.querySelector(".main__order");
 const cartProduct = document.querySelector(".main__cart--product");
 const cartCostAmount = document.querySelector(
   ".main__cart--cost span:nth-child(3)",
@@ -41,39 +41,50 @@ const cartCostAmount = document.querySelector(
 const cartCostTotal = document.querySelector(
   ".main__cart--cost span:nth-child(5)",
 );
+
 let cartCount = 0;
 let cartTotal = 0;
 
-addBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    cartCount++;
-    const item = e.target.closest(".main__order--item");
-    const name = item.querySelector(".main__order--item-name").innerText;
-    let priceStr = item.querySelector(".main__order--price-sale").innerText;
-    let price = parseInt(priceStr.replace(/[^0-9]/g, ""));
-    cartTotal += price;
+// Utility functions
+const formatCurrency = (amount) => amount.toLocaleString("vi-VN") + "đ";
+const updateCartUI = () => {
+  cartCostAmount.innerText = cartCount;
+  cartCostTotal.innerText = formatCurrency(cartTotal);
+};
 
-    if (cartCount === 1) {
-      cartProduct.innerHTML = "";
+// Sử dụng Event Delegation gắn thẳng vào div .main__order
+if (mainOrder) {
+  mainOrder.addEventListener("click", (e) => {
+    if (e.target.classList.contains("main__order--add")) {
+      cartCount++;
+      const item = e.target.closest(".main__order--item");
+      const name = item.querySelector(".main__order--item-name").innerText;
+      const priceStr = item.querySelector(".main__order--price-sale").innerText;
+      const price = parseInt(priceStr.replace(/[^0-9]/g, ""), 10);
+
+      cartTotal += price;
+
+      if (cartCount === 1) {
+        cartProduct.innerHTML = "";
+      }
+
+      const div = document.createElement("div");
+      div.style.paddingBottom = "5px";
+      div.innerText = name;
+      cartProduct.appendChild(div);
+
+      updateCartUI();
     }
-    const div = document.createElement("div");
-    div.style.paddingBottom = "5px";
-    div.innerText = name;
-    cartProduct.appendChild(div);
-
-    cartCostAmount.innerText = cartCount;
-    cartCostTotal.innerText = cartTotal.toLocaleString("vi-VN") + "đ";
   });
-});
+}
 
-// Fixed: Nút xóa tất cả giỏ hàng
+// Nút xóa tất cả giỏ hàng
 const clearCartBtn = document.querySelector(".main__cart--title p");
 if (clearCartBtn) {
   clearCartBtn.addEventListener("click", () => {
     cartCount = 0;
     cartTotal = 0;
     cartProduct.innerHTML = "Chưa có sản phẩm nào!";
-    cartCostAmount.innerText = "0";
-    cartCostTotal.innerText = "0đ";
+    updateCartUI();
   });
 }

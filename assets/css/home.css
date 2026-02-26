@@ -39,7 +39,7 @@
   transform: translateY(-50%);
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.3);
-  color: #fff;
+  color: var(--color-white);
   border: none;
   padding: 20px 15px;
   cursor: pointer;
@@ -83,7 +83,7 @@
 }
 
 .home__hero-btn a:hover {
-  background-color: #d3b673;
+  background-color: var(--color-primary);
   border: 2px solid transparent;
 }
 
@@ -110,7 +110,7 @@
 
 .product__subtitle {
   font-size: 2.2rem;
-  color: #d3b673;
+  color: var(--color-primary);
 }
 
 .product__heading {
@@ -157,7 +157,7 @@
 }
 
 .product__price--origin {
-  color: #d3b673;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -174,14 +174,14 @@
   padding: 12px 20px;
   color: white;
   border: 1px solid transparent;
-  background-color: #d3b673;
+  background-color: var(--color-primary);
   cursor: pointer;
 }
 
 .product__btn:hover,
 .product__list-btn:hover {
-  border: 1px solid #d3b673;
-  color: #d3b673;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   background-color: transparent;
 }
 
@@ -223,7 +223,7 @@
 }
 
 .banner__subtitle {
-  color: #d3b673;
+  color: var(--color-primary);
   font-size: 2.2rem;
 }
 
@@ -241,14 +241,14 @@
   padding: 12px 20px;
   color: white;
   border: 1px solid transparent;
-  background-color: #d3b673;
+  background-color: var(--color-primary);
   cursor: pointer;
   margin: 0 auto;
 }
 
 .banner__btn:hover {
-  border: 1px solid #d3b673;
-  color: #d3b673;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   background-color: transparent;
 }
 

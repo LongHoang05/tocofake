@@ -40,7 +40,7 @@
 }
 
 .footer__title {
-  color: #d3b673;
+  color: var(--color-primary);
   font-size: 2rem;
   margin-bottom: 30px;
 }
@@ -80,7 +80,7 @@
 .footer__info-item .footer__icon {
   margin-right: 10px;
   font-size: 1.8rem;
-  color: #d3b673;
+  color: var(--color-primary);
 }
 
 .footer__social-list {
@@ -90,7 +90,7 @@
 }
 
 .footer__social-list .footer__icon {
-  color: #d3b673;
+  color: var(--color-primary);
   font-size: 2.4rem;
 }
 

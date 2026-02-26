@@ -1,6 +1,29 @@
 @import url(layout/header.css);
 @import url(layout/footer.css);
 
+:root {
+  --color-primary: #d3b673;
+  --color-primary-light: #d8b979;
+  --color-primary-bg: #fbeed1;
+
+  --color-text-main: #282828;
+  --color-text-desc: #4d4d4d;
+  --color-text-light: #535353;
+  --color-text-price: #8a733f;
+
+  --color-bg-dark: #212529;
+  --color-white: #fff;
+  --color-bg-light: #f5f5f5;
+  --color-bg-lighter: #f1f1f1;
+  --color-bg-lightest: #fbfbfb;
+
+  --color-danger: #ee4d2d;
+  --color-info: #799dd9;
+
+  --font-main: "Barlow", sans-serif;
+  --font-heading: "Baloo 2", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;

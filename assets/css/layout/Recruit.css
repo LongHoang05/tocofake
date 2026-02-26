@@ -38,11 +38,11 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   padding: 8px;
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.4rem;
 }
 .menu__color a{
-  color: #d3b673;
+  color: var(--color-primary);
 }
 .navbar__container--brand {
   padding-top: 0.5rem;
@@ -59,16 +59,16 @@ a {
   font-weight: 500;
   font-size: 30px;
   transform: rotate(90deg);
-  color: #fff;
+  color: var(--color-white);
   opacity: 0.6;
 }
 .navbar-brand img {
   height: 42px;
 }
 .scrolled {
-  background-color: #212529;
+  background-color: var(--color-bg-dark);
   position: fixed;
-  box-shadow: 0 4px 7px 0 #d3b673;
+  box-shadow: 0 4px 7px 0 var(--color-primary);
   animation: slideDown 0.7s ease;
 }
 @keyframes slideDown {
@@ -123,7 +123,7 @@ a {
 }
 .Slider__content--title {
   font-size: 4rem;
-  color: #d3b673;
+  color: var(--color-primary);
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
@@ -132,14 +132,14 @@ a {
   letter-spacing: 2.7px;
   text-transform: uppercase;
   margin-bottom: 77px;
-  color: #fff;
+  color: var(--color-white);
   font-weight: 500px;
   line-height: 1.2;
 }
 .Slider__content--link {
   padding: 7px 25px;
-  color: #fff;
-  background-color: #d3b673;
+  color: var(--color-white);
+  background-color: var(--color-primary);
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: 600;
@@ -156,7 +156,7 @@ button {
 }
 button i {
   font-size: 32px;
-  color: #fff;
+  color: var(--color-white);
   opacity: 0.5;
 }
 .Slider__content__btn--right,
@@ -192,14 +192,14 @@ button i:hover {
 }
 .jobSection__text__subtitile {
   font-size: 24px;
-  color: #d3b673;
+  color: var(--color-primary);
   margin-bottom: 16px;
 }
 .jobSection__text__titile {
   letter-spacing: 1.8px;
   font-size: 38px;
   font-weight: 700;
-  color: #282828;
+  color: var(--color-text-main);
   display: block;
     margin-bottom: 15px;
 }
@@ -240,7 +240,7 @@ button i:hover {
 
 .Banner__about__content--description {
   padding: 38px 80px 0;
-  color: #fff;
+  color: var(--color-white);
   font-size: 14px;
   line-height: 22px;
 }
@@ -293,11 +293,11 @@ button i:hover {
 }
 .collection-item i {
   font-size: 60px;
-  color: #d3b673;
+  color: var(--color-primary);
   transition: transform 1.5s ease, color 1.5s ease;
 }
 .collection-item i:hover {
-  color: #282828;
+  color: var(--color-text-main);
   transform: rotate(360deg);
 }
 .collection-item span {

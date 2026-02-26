@@ -63,7 +63,7 @@
     margin-right: auto;
   }
   .navbar__background {
-    background-color: #212529;
+    background-color: var(--color-bg-dark);
   }
   .navbar__nav {
     display: flex;
@@ -72,7 +72,7 @@
   }
   #nav-links.show {
     max-height: 300px;
-    background-color: #212529;
+    background-color: var(--color-bg-dark);
   }
   .Slider__content h3 {
     font-size: 16px;

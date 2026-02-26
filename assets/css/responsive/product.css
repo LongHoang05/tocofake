@@ -88,7 +88,7 @@
     right: 20px;
     width: 615px;
     height: 315px;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(30px);
@@ -151,7 +151,7 @@
     flex-direction: column;
     position: absolute;
     top: -36px;
-    background: #fff;
+    background: var(--color-white);
     width: 100%;
     opacity: 0;
     transition: opacity 0.2s ease, top 0.3s ease;
@@ -169,7 +169,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: #fff;
+    background: var(--color-white);
   }
 
   .main__cart--btn {
@@ -233,7 +233,7 @@
     right: 20px;
     width: 340px;
     height: 315px;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 2px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(30px);
@@ -303,7 +303,7 @@
     flex-direction: column;
     position: absolute;
     top: -36px;
-    background: #fff;
+    background: var(--color-white);
     width: 100%;
     opacity: 0;
     transition: opacity 0.2s ease, top 0.3s ease;
@@ -321,7 +321,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: #fff;
+    background: var(--color-white);
   }
 
   .main__cart--btn {

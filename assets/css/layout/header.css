@@ -9,7 +9,7 @@
 }
 #header.active {
   position: fixed;
-  background-color: #282828;
+  background-color: var(--color-text-main);
   animation: slideDown 0.7s ease;
 }
 @keyframes slideDown {
@@ -61,7 +61,7 @@
   position: absolute;
   width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #282828;
+  background-color: var(--color-text-main);
   list-style: none;
   font-size: 1.4rem;
   font-weight: 700;
@@ -96,7 +96,7 @@
 }
 
 .header__item-link:hover {
-  color: #d3b673;
+  color: var(--color-primary);
 }
 
 .header__navbar-link-underline:hover {
@@ -111,7 +111,7 @@
 
 .header__btn {
   flex: 1;
-  background-color: #d3b673;
+  background-color: var(--color-primary);
   border: none;
   border-radius: 20px;
   text-align: center;
