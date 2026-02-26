@@ -4,7 +4,14 @@ async function loadComponent(id, file) {
     try {
       const response = await fetch(file);
       if (!response.ok) throw new Error(`Không tìm thấy file ${file}`);
-      const html = await response.text();
+      let html = await response.text();
+
+      // Xử lý linh động đường dẫn thư mục cho ảnh và thẻ a
+      const isSubDir = window.location.pathname.includes("/pages/");
+      const pathPrefix = isSubDir ? "../" : "./";
+      html = html.replace(/href="\.\.\//g, `href="${pathPrefix}`);
+      html = html.replace(/src="\.\.\//g, `src="${pathPrefix}`);
+
       container.innerHTML = html;
     } catch (error) {
       console.error("Lỗi tải Component:", error);
